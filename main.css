@@ -50,6 +50,8 @@ body{
             }
         }
         > h1{
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 5px;
             color: white;
         }
     }
@@ -120,12 +122,16 @@ body{
         padding-bottom: 10px;
         font-size: 1.5rem;
     }
-    > video{
+    > .remas{
+        overflow: hidden;
         width: 90%;
         border-radius: 5px;
-    }
-    > img{
-        width: 90%;
+        > video{
+            width: 100%;
+        }
+        > img{
+            width: 100%;
+        }
     }
     > p{
         font-family: "Open Sans", sans-serif;
@@ -135,13 +141,14 @@ body{
     }
 }
 
-.tab1,
-.tab2,
-.tab3,
-.tab4{
+
+.hidden{
     display: none;
 }
-.close:hover{
+.close:hover,
+.close1:hover,
+.close2:hover,
+.close3:hover{
     animation: close 0.3s ease 1;
 }
 @keyframes close {
@@ -176,11 +183,17 @@ body{
     .tab2,
     .tab3,
     .tab4{
+        margin-top: 5%;
         width: 80%;
-        height: 90%;
-        > video{
-            max-height: 400px;
+        height: fit-content;
+        > .remas{
+            width: 90%;
+            max-height: 350px;
+            overflow: hidden;
             border-radius: 5px;
+            > img{
+                position: center;
+            }
         }
     }
 }
